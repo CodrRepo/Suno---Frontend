@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: 'https://suno-backend.onrender.com', // Update with your backend URL or use environment variable
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

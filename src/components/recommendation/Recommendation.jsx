@@ -13,7 +13,7 @@ const Recommendation = () => {
     setLoading(true)
     setError(null)
     axios.get('/api/history/recommendations', { withCredentials: true })
-      .then(res => setSongs(res.data.songs || []))
+      .then(res => {setSongs(res.data.songs || []); console.log(res.data)})
       .catch(err => setError(err.response?.data?.message || 'Failed to load recommendations'))
       .finally(() => setLoading(false))
   }, [])
