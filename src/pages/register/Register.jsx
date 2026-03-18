@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from '../../utils/axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
+import { clearAuthData } from '../../utils/clearAuth'
 import './register.css'
 
 const Register = () => {
@@ -20,8 +21,18 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+
+    // Clear any old auth data first
+    clearAuthData()
+
     try {
       const res = await axios.post('/api/auth/register', formData, { withCredentials: true })
+
+      // Store token in localStorage
+      if (res.data.token) {
+        localStorage.setItem('authToken', res.data.token)
+      }
+
       setUser(res.data.user)
       navigate('/')
     } catch (err) {

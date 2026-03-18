@@ -4,10 +4,29 @@ import axios from 'axios';
 const axiosInstance = axios.create({
   baseURL: 'https://suno-backend.onrender.com', // Update with your backend URL or use environment variable
   withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-  },
 });
+
+// Request interceptor to add token to headers
+axiosInstance.interceptors.request.use(
+  (config) => {
+    // Get token from localStorage
+    const token = localStorage.getItem('authToken');
+
+    // If token exists, add it to Authorization header
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    // If sending FormData, let browser set Content-Type with boundary
+    // Otherwise, default to application/json
+    if (!(config.data instanceof FormData)) {
+      config.headers['Content-Type'] = 'application/json';
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 // Response interceptor for error handling
 axiosInstance.interceptors.response.use(

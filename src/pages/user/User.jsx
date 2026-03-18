@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import axios from '../../utils/axios'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
+import { clearAuthData } from '../../utils/clearAuth'
 import './user.css'
 
 function compressImage(file, maxPx = 400, quality = 0.82) {
@@ -120,6 +121,8 @@ const User = () => {
     } catch {
       // proceed regardless
     }
+    // Clear all auth data (localStorage + cookies)
+    clearAuthData()
     setUser(null)
     navigate('/login')
   }

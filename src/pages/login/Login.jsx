@@ -3,6 +3,7 @@ import axios from '../../utils/axios';  // adjust path as needed
 import './login.css'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
+import { clearAuthData } from '../../utils/clearAuth'
 
 const Login = () => {
   const emailRef = useRef()
@@ -17,12 +18,22 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+
+    // Clear any old auth data first
+    clearAuthData()
+
     try {
       const res = await axios.post(
         '/api/auth/login',
         { email: emailRef.current.value, password: passwordRef.current.value },
         { withCredentials: true }
       )
+
+      // Store token in localStorage
+      if (res.data.token) {
+        localStorage.setItem('authToken', res.data.token)
+      }
+
       setUser(res.data.user)
       navigate('/')
     } catch (err) {
