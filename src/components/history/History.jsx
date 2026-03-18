@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios'
 import { usePlayer } from '../../context/PlayerContext'
 import './history.css'
 

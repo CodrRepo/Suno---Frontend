@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import './register.css'

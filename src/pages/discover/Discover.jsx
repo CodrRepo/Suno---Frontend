@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import { useLocation } from 'react-router-dom'
 import './discover.css'
 import Card from '../../components/card/Card'

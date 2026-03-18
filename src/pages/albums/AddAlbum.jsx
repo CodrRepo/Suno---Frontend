@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import '../songs/addSong.css'

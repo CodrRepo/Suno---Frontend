@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import './login.css'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'

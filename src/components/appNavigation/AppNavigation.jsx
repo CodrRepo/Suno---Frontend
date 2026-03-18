@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios'
 import { NavLink, useNavigate } from 'react-router-dom'
 import './appNavigation.css'
 import { useUser } from '../../context/UserContext'

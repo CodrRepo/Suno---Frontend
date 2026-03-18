@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import { useUser } from '../../context/UserContext'
 import './admin.css'
 

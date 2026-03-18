@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import { useUser } from '../../context/UserContext'
 import './albums.css'
 import Card from '../../components/card/Card'

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../../utils/axios';  // adjust path as needed
 import { usePlayer } from '../../context/PlayerContext'
 import './home.css'
 
