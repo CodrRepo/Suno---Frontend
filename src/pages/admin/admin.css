@@ -1,0 +1,72 @@
+.admin-page {
+  padding: 2rem 0;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.admin-tabs button {
+  border: 1px solid #ffffff30;
+  background: #ffffff0f;
+  color: #fff;
+  border-radius: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.admin-tabs button.active {
+  border-color: var(--primary-color);
+  background: #c00;
+}
+
+.admin-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 42rem;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid #ffffff1f;
+  color: #fff;
+  font-size: 0.92rem;
+}
+
+.admin-table th {
+  color: var(--medium-gray-color);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.admin-danger-btn {
+  border: 1px solid #ff5d5d;
+  background: #a30000;
+  color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+}
+
+.admin-danger-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.admin-status {
+  color: var(--medium-gray-color);
+}
+
+.admin-error {
+  color: #ff6b6b;
+}

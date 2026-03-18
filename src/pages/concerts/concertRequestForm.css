@@ -1,0 +1,174 @@
+.crf-page {
+  padding: 2rem 2.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 38rem;
+}
+
+/* ── Back ── */
+.crf-back {
+  background: none;
+  border: none;
+  color: var(--medium-gray-color);
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+
+.crf-back:hover {
+  color: white;
+}
+
+/* ── Card ── */
+.crf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* ── Heading ── */
+.crf-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.crf-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.crf-subtitle {
+  font-size: 0.85rem;
+  color: var(--medium-gray-color);
+  margin: 0;
+}
+
+.crf-artist-name {
+  color: white;
+  font-weight: 600;
+}
+
+/* ── Error ── */
+.crf-error {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 0.6rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  color: #ef4444;
+  margin: 0;
+}
+
+/* ── Form ── */
+.crf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.crf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.crf-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.crf-optional {
+  font-weight: 400;
+  color: var(--medium-gray-color);
+}
+
+.crf-input,
+.crf-textarea {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.65rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.crf-input:focus,
+.crf-textarea:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.crf-input::placeholder,
+.crf-textarea::placeholder {
+  color: var(--medium-gray-color);
+}
+
+.crf-input[type='number']::-webkit-inner-spin-button,
+.crf-input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.crf-textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.crf-char-count {
+  font-size: 0.75rem;
+  color: var(--medium-gray-color);
+  align-self: flex-end;
+}
+
+.crf-hint {
+  font-size: 0.75rem;
+  color: var(--medium-gray-color);
+}
+
+/* date input dark-theme fix */
+.crf-input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* ── Submit ── */
+.crf-submit {
+  margin-top: 0.25rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.crf-submit:hover:not(:disabled) {
+  background-color: #cc0000;
+}
+
+.crf-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

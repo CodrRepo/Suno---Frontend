@@ -1,0 +1,22 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dashboard-content::-webkit-scrollbar {
+    display: none;
+}
+
+.player-container {
+    flex-shrink: 0;
+    padding-bottom: 2rem;
+    z-index: 30;
+}

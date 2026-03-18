@@ -1,0 +1,327 @@
+.add-song-page {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: white;
+}
+
+.add-song-page-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.add-song-back-btn {
+  background: none;
+  border: none;
+  color: var(--medium-gray-color);
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.add-song-back-btn:hover {
+  color: white;
+}
+
+/* ── Card ── */
+.add-song-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1em;
+  padding: 1.75rem 2rem;
+}
+
+/* ── Form grid ── */
+.add-song-layout {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+}
+
+.add-song-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.add-song-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.add-song-field.full-span {
+  grid-column: 1 / -1;
+}
+
+.add-song-field label {
+  color: var(--light-gray-color);
+  font-size: 0.85rem;
+}
+
+.add-song-required {
+  color: #ef4444;
+}
+
+.add-song-field input,
+.add-song-field select {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6em;
+  padding: 0.6em 0.85em;
+  color: white;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.add-song-field input::placeholder {
+  color: var(--medium-gray-color);
+}
+
+.add-song-field input:focus,
+.add-song-field select:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.add-song-field select option {
+  background-color: #1a1a1a;
+}
+
+/* ── Duration ── */
+.add-song-duration {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.add-song-duration input {
+  width: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.add-song-duration-sep {
+  color: var(--medium-gray-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ── Error ── */
+.add-song-error {
+  font-size: 0.85rem;
+  color: #ff5555;
+  margin-bottom: 1rem;
+}
+
+/* ── Actions ── */
+.add-song-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.add-song-btn-cancel {
+  padding: 0.55em 1.5em;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--light-gray-color);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6em;
+  font-size: 0.88rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-song-btn-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.add-song-btn-submit {
+  padding: 0.55em 1.75em;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.6em;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-song-btn-submit:hover:not(:disabled) {
+  background-color: #cc0000;
+}
+
+/* ── Cover art picker ── */
+.cover-art-picker {
+  flex-shrink: 0;
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0.75em;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  transition: border-color 0.2s;
+}
+
+.cover-art-picker input[type='file'] {
+  display: none;
+}
+
+.cover-art-picker:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cover-art-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.cover-art-icon {
+  font-size: 1.8rem;
+}
+
+.cover-art-hint {
+  font-size: 0.75rem;
+  color: var(--medium-gray-color);
+}
+
+.cover-art-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-art-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cover-art-picker:hover .cover-art-overlay {
+  opacity: 1;
+}
+
+/* ── File picker ── */
+.file-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.file-picker input[type='file'] {
+  display: none;
+}
+
+.file-picker-btn {
+  flex-shrink: 0;
+  padding: 0.55em 1.1em;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5em;
+  color: white;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.file-picker:hover .file-picker-btn {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.file-picker-name {
+  color: var(--medium-gray-color);
+  font-size: 0.88rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.file-picker-name:not(:empty) {
+  color: var(--light-gray-color);
+}
+
+/* ── Duration auto-detect ── */
+.detecting-badge {
+  margin-left: 0.6rem;
+  font-size: 0.75rem;
+  color: #facc15;
+  font-weight: 500;
+  animation: pulse-text 1s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.input-detecting {
+  border-color: rgba(250, 204, 21, 0.4) !important;
+  color: var(--medium-gray-color);
+}
+
+/* ── Detected duration chip ── */
+.duration-detected {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6em;
+  padding: 0.6em 0.85em;
+  font-size: 0.9rem;
+}
+
+.duration-detected-value {
+  font-weight: 600;
+  color: white;
+  font-variant-numeric: tabular-nums;
+}
+
+.duration-detected-label {
+  font-size: 0.75rem;
+  color: #4ade80;
+  flex: 1;
+}
+
+.duration-edit-btn {
+  background: none;
+  border: none;
+  color: var(--medium-gray-color);
+  font-size: 0.78rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.duration-edit-btn:hover {
+  color: white;
+}

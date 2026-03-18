@@ -1,0 +1,303 @@
+.ard-page {
+  padding: 2rem 2.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Back ── */
+.ard-back {
+  background: none;
+  border: none;
+  color: var(--medium-gray-color);
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+
+.ard-back:hover {
+  color: white;
+}
+
+/* ── Hero ── */
+.ard-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.ard-avatar-wrap {
+  flex-shrink: 0;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.ard-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ard-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--medium-gray-color);
+}
+
+.ard-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ard-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--medium-gray-color);
+}
+
+.ard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.ard-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.ard-tag {
+  font-size: 0.75rem;
+  color: var(--medium-gray-color);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  padding: 0.2em 0.75em;
+}
+
+.ard-desc {
+  font-size: 0.85rem;
+  color: var(--medium-gray-color);
+  margin: 0;
+  max-width: 36rem;
+  line-height: 1.5;
+}
+
+/* ── Song list ── */
+.ard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ard-list-header,
+.ard-song-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 5rem;
+  align-items: center;
+  padding: 0.45rem 0.5rem;
+  gap: 0.75rem;
+}
+
+.ard-list-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.6rem;
+}
+
+.ard-list-header span {
+  font-size: 0.72rem;
+  color: var(--medium-gray-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ard-song-row {
+  border-radius: 0.6em;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.ard-song-row:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ard-song-row.active .ard-song-title,
+.ard-song-row.active .col-num {
+  color: red;
+}
+
+/* ── Shared columns ── */
+.col-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-num {
+  color: var(--medium-gray-color);
+  font-size: 0.85rem;
+}
+
+.playing-icon {
+  width: 1rem;
+  height: 1rem;
+  color: red;
+}
+
+.col-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.col-duration {
+  font-size: 0.82rem;
+  color: var(--medium-gray-color);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Thumbnail ── */
+.ard-thumb-wrap {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.35em;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.ard-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ard-thumb-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--medium-gray-color);
+}
+
+.ard-song-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  overflow: hidden;
+}
+
+.ard-song-title {
+  font-size: 0.88rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s;
+}
+
+.ard-song-genre {
+  font-size: 0.76rem;
+  color: var(--medium-gray-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Follow button ── */
+.ard-action-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ard-follow-btn {
+  margin-top: 0;
+  padding: 0.45em 1.4em;
+  border-radius: 2rem;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+  align-self: flex-start;
+}
+
+.ard-follow-btn:hover:not(:disabled) {
+  background-color: white;
+  color: black;
+}
+
+.ard-follow-btn.following {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--medium-gray-color);
+}
+
+.ard-follow-btn.following:hover:not(:disabled) {
+  background-color: rgba(255, 85, 85, 0.15);
+  border-color: #ff5555;
+  color: #ff5555;
+}
+
+.ard-follow-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Concert request button ── */
+.ard-concert-btn {
+  padding: 0.45em 1.4em;
+  border-radius: 2rem;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s, opacity 0.15s;
+}
+
+.ard-concert-btn:hover {
+  background-color: #cc0000;
+}
+
+/* ── Status ── */
+.ard-status {
+  color: var(--medium-gray-color);
+  font-size: 0.9rem;
+}
+
+.ard-error {
+  color: #ff5555;
+}

@@ -1,0 +1,144 @@
+.register {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: black;
+}
+
+.register .bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.register .form-container {
+  position: relative;
+  z-index: 20;
+  background-color: #ffffff0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: fit-content;
+  width: 28%;
+  min-width: 320px;
+  border-radius: 1.25em;
+  backdrop-filter: blur(24px);
+  padding: 2.5rem 2.5rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register .form-container #logo {
+  width: 4.5rem;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.register .form-container h1 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.register .form-container .subtitle {
+  color: var(--light-gray-color);
+  font-size: 0.88rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register .form-container form {
+  width: 100%;
+  position: relative;
+}
+
+.register .form-container form .message-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-130%);
+}
+
+.register .form-container .error-msg {
+  color: #ff5555;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.register .form-container label {
+  display: block;
+  color: var(--light-gray-color);
+  font-size: 0.88rem;
+  margin-bottom: 0.4em;
+}
+
+.register .form-container input {
+  width: 100%;
+  padding: 0.65em 0.85em;
+  margin-bottom: 1.25em;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6em;
+  outline: none;
+  font-size: 0.95rem;
+  color: white;
+  font-family: inherit;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.register .form-container input::placeholder {
+  color: var(--medium-gray-color);
+}
+
+.register .form-container input:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.register .form-container button {
+  width: 100%;
+  padding: 0.65em;
+  border: none;
+  border-radius: 0.6em;
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.register .form-container button:hover {
+  background-color: #cc0000;
+}
+
+.register .form-container .redirect {
+  margin-top: 1.2em;
+  color: var(--medium-gray-color);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.register .form-container p .login-link {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.register .form-container p .login-link:hover {
+  color: var(--light-gray-color);
+}

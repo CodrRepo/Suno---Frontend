@@ -1,0 +1,130 @@
+#discover-container {
+    padding: 2rem 0;
+}
+
+.discover-heading {
+    margin-bottom: 1.5rem;
+}
+
+.discover-status {
+    padding: 0 0.8rem;
+    color: var(--medium-gray-color);
+    margin-bottom: 1rem;
+}
+
+.discover-error {
+    color: #ff6b6b;
+}
+
+.genre-section {
+    margin-bottom: 2.5rem;
+}
+
+.genre-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.genre-title {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.show-all {
+    font-size: 0.9rem;
+    color: var(--medium-gray-color);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.show-all:hover {
+    color: var(--light-gray-color);
+}
+
+/* Slider */
+.genre-slider-wrapper {
+    position: relative;
+}
+
+.genre-cards {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.genre-cards .card {
+    flex: 0 0 20%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgb(60, 60, 60);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.genre-slider-wrapper:hover .slider-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slider-btn:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.slider-btn svg {
+    width: 0.65rem;
+    fill: #fff;
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .genre-cards .card {
+        flex: 0 0 33.33%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .genre-title {
+        font-size: 1.1rem;
+    }
+
+    .genre-cards .card {
+        flex: 0 0 65%;
+    }
+
+    .slider-btn {
+        width: 1.8rem;
+        aspect-ratio: 1;
+    }
+
+    .slider-btn svg {
+        width: 0.55rem;
+    }
+}

@@ -1,0 +1,103 @@
+.hist-status {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.hist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.hist-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.hist-item--active {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.hist-item--active .hist-title {
+  color: red;
+}
+
+/* Thumbnail with play overlay */
+.hist-thumb-wrap {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.hist-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.hist-thumb--empty {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.hist-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.hist-play-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.hist-item:hover .hist-play-icon,
+.hist-item--active .hist-play-icon {
+  opacity: 1;
+}
+
+.hist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.hist-title {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hist-artist {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hist-time {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}

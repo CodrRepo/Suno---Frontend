@@ -1,0 +1,120 @@
+.rec-status {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.rec-block-separator {
+  height: 1px;
+  margin: 0.65rem 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rec-subheader {
+  margin-top: 0.2rem;
+}
+
+.rec-item,
+.rec-top-song {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.rec-item:hover,
+.rec-top-song:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.rec-item--active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.rec-item--active .rec-title {
+  color: #f04747;
+}
+
+/* Thumbnail with play overlay */
+.rec-thumb-wrap {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.rec-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.rec-thumb--empty {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.rec-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.rec-play-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.rec-item:hover .rec-play-icon,
+.rec-item--active .rec-play-icon {
+  opacity: 1;
+}
+
+.rec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.rec-title {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rec-artist {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rec-genre {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  text-transform: capitalize;
+}
+
+.rec-status--error {
+  color: #f04747;
+}
