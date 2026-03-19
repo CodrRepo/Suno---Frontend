@@ -83,21 +83,6 @@ const Concerts = () => {
               + Request New Concert
             </button>
           )}
-
-          <div className='profile-toggle'>
-            <button
-              className={`toggle-opt ${profileType === 'artist' ? 'active' : ''}`}
-              onClick={() => setProfileType('artist')}
-            >
-              Artist
-            </button>
-            <button
-              className={`toggle-opt ${profileType === 'listener' ? 'active' : ''}`}
-              onClick={() => setProfileType('listener')}
-            >
-              Listener
-            </button>
-          </div>
         </div>
       </div>
 

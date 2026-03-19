@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
     <div className='login'>
-      {/* <img className="bg-img" src="/images/download3.jpg" alt="Login" /> */}
+      <img className="bg-img" src="/images/download3.jpg" alt="Login" />
 
       <div className="form-container">
         <img id='logo' src="/images/logo red.png" alt="suno" />
