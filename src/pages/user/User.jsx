@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import { clearAuthData } from '../../utils/clearAuth'
 import './user.css'
+import { usePlayer } from '../../context/PlayerContext'
 
 function compressImage(file, maxPx = 400, quality = 0.82) {
   return new Promise((resolve) => {
@@ -59,6 +60,7 @@ const User = () => {
   const [avatarUploading, setAvatarUploading] = useState(false)
   const [avatarError, setAvatarError] = useState('')
   const avatarInputRef = useRef(null)
+  const {pause} = usePlayer();
 
   useEffect(() => {
     if (user) {
@@ -122,6 +124,7 @@ const User = () => {
       // proceed regardless
     }
     // Clear all auth data (localStorage + cookies)
+    pause();
     clearAuthData()
     setUser(null)
     navigate('/login')

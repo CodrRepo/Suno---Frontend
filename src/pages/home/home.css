@@ -201,3 +201,72 @@
     font-size: 0.9rem;
     padding: 0.5rem 0;
 }
+
+/* ---------------------- MOBILE RESPONSIVE ------------------- */
+@media (max-width: 1024px) {
+    .panel-container{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 1rem;
+    }
+}
+@media (max-width: 800px) {
+    .panel-container{
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .panel-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .panel:first-child{
+        position: absolute;
+        /* display: none; */
+        top: 0;
+    }
+    
+    .panel:last-child {
+        position: absolute;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        /* display: none; */
+    }
+
+    .collection__section{
+        flex: 0 !important;
+    }
+    
+    .collection__list{
+        flex: none !important;
+        height: 40vh !important;
+    }
+
+    .home-content {
+        padding: 1rem 0;
+    }
+
+    .home-content .card {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .home-content .card-song {
+        font-size: 1.8rem;
+        width: 80%;
+    }
+
+    .playlist-table th,
+    .playlist-table td {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .playlist-table th {
+        font-size: 0.7rem;
+    }
+}

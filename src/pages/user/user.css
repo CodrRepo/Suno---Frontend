@@ -511,3 +511,173 @@
   font-size: 0.78rem;
   color: var(--medium-gray-color);
 }
+
+/* ── Responsive Design ── */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .user-page {
+    padding: 2rem;
+  }
+
+  .user-header {
+    padding: 1.75rem 2rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .user-page {
+    padding: 1.5rem;
+  }
+
+  .user-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .user-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-header-top {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-header-top h1 {
+    font-size: 1.4rem;
+  }
+
+  .user-stats {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .user-card {
+    padding: 1.5rem;
+  }
+
+  .user-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full-span {
+    grid-column: 1;
+  }
+
+  .delete-confirm-actions {
+    flex-direction: column;
+  }
+
+  .delete-confirm-actions button {
+    width: 100%;
+  }
+
+  .artist-name-prompt-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-confirm-artist,
+  .btn-cancel-artist {
+    width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .user-page {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .user-header {
+    padding: 1.25rem;
+  }
+
+  .user-avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.8rem;
+  }
+
+  .user-header-top h1 {
+    font-size: 1.25rem;
+  }
+
+  .user-badge {
+    font-size: 0.65rem;
+    padding: 0.25em 0.65em;
+  }
+
+  .user-email {
+    font-size: 0.82rem;
+  }
+
+  .user-joined {
+    font-size: 0.78rem;
+  }
+
+  .stat-value {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+
+  .user-card {
+    padding: 1.25rem;
+  }
+
+  .user-card-title {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-field label {
+    font-size: 0.8rem;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 0.85rem;
+    padding: 0.65em 0.75em;
+  }
+
+  .btn-save,
+  .btn-logout,
+  .btn-delete,
+  .btn-cancel {
+    font-size: 0.85rem;
+    padding: 0.65em 1.25em;
+  }
+
+  .profile-type-toggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .profile-type-btn {
+    flex: 1;
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+  }
+
+  .artist-prompt-photo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .artist-prompt-avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+}

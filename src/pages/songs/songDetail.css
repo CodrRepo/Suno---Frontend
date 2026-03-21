@@ -150,3 +150,184 @@
 .sd-edit-cover-label:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
+
+/* ── Responsive Design ── */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .sd-page {
+    padding: 1.75rem 2rem;
+  }
+
+  .sd-cover-wrap {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .sd-title {
+    font-size: 2.2rem;
+  }
+
+  .sd-cover-placeholder {
+    font-size: 3rem;
+  }
+
+  .sd-artists-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .sd-page {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .sd-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .sd-cover-wrap {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .sd-cover-placeholder {
+    font-size: 2.5rem;
+  }
+
+  .sd-play-btn {
+    opacity: 1;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .sd-meta {
+    align-items: center;
+    width: 100%;
+  }
+
+  .sd-title {
+    font-size: 2rem;
+  }
+
+  .sd-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sd-section-title {
+    font-size: 1rem;
+  }
+
+  .sd-artists-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  .sd-edit-cover-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .sd-edit-cover-thumb {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /* Edit Modal */
+  .pl-modal {
+    width: 90%;
+    max-width: 90%;
+    margin: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .sd-page {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .sd-hero {
+    gap: 1.25rem;
+  }
+
+  .sd-cover-wrap {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .sd-cover-placeholder {
+    font-size: 2rem;
+  }
+
+  .sd-play-btn {
+    bottom: 0.4rem;
+    right: 0.4rem;
+  }
+
+  .sd-title {
+    font-size: 1.6rem;
+  }
+
+  .sd-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .sd-actions button {
+    width: 100%;
+  }
+
+  .sd-section-title {
+    font-size: 0.95rem;
+  }
+
+  .sd-status {
+    font-size: 0.85rem;
+  }
+
+  .sd-artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .sd-edit-cover-thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .sd-edit-cover-label {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Edit Modal */
+  .pl-modal {
+    width: 95%;
+    max-width: 95%;
+    margin: 0.5rem;
+    padding: 1.25rem;
+  }
+
+  .pl-modal-title {
+    font-size: 1.1rem;
+  }
+
+  .pl-modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pl-modal-actions button {
+    width: 100%;
+  }
+}

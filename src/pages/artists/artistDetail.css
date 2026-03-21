@@ -301,3 +301,219 @@
 .ard-error {
   color: #ff5555;
 }
+
+/* ── Responsive Design ── */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .ard-page {
+    padding: 1.75rem 2rem;
+  }
+
+  .ard-avatar-wrap {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .ard-title {
+    font-size: 2.2rem;
+  }
+
+  .ard-avatar-placeholder {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .ard-page {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .ard-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .ard-avatar-wrap {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .ard-avatar-placeholder {
+    font-size: 3rem;
+  }
+
+  .ard-meta {
+    align-items: center;
+    width: 100%;
+  }
+
+  .ard-title {
+    font-size: 2rem;
+  }
+
+  .ard-tags {
+    justify-content: center;
+  }
+
+  .ard-desc {
+    text-align: center;
+  }
+
+  .ard-action-row {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ard-follow-btn,
+  .ard-concert-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .ard-list-header,
+  .ard-song-row {
+    grid-template-columns: 2rem 1fr 4rem;
+    gap: 0.5rem;
+    padding: 0.4rem 0.35rem;
+  }
+
+  .ard-list-header span {
+    font-size: 0.68rem;
+  }
+
+  .ard-thumb-wrap {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .ard-song-title {
+    font-size: 0.85rem;
+  }
+
+  .ard-song-genre {
+    font-size: 0.72rem;
+  }
+
+  .col-duration {
+    font-size: 0.78rem;
+  }
+
+  .track-num {
+    font-size: 0.8rem;
+  }
+
+  .playing-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .ard-page {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .ard-back {
+    font-size: 0.85rem;
+  }
+
+  .ard-hero {
+    gap: 1.25rem;
+  }
+
+  .ard-avatar-wrap {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .ard-avatar-placeholder {
+    font-size: 2.5rem;
+  }
+
+  .ard-label {
+    font-size: 0.68rem;
+  }
+
+  .ard-title {
+    font-size: 1.6rem;
+  }
+
+  .ard-tag {
+    font-size: 0.7rem;
+    padding: 0.2em 0.65em;
+  }
+
+  .ard-desc {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .ard-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .ard-follow-btn,
+  .ard-concert-btn {
+    width: 100%;
+    padding: 0.5em 1.2em;
+    font-size: 0.82rem;
+  }
+
+  .ard-list-header,
+  .ard-song-row {
+    grid-template-columns: 1.75rem 1fr 3.5rem;
+    gap: 0.4rem;
+    padding: 0.35rem 0.25rem;
+  }
+
+  .ard-list-header {
+    padding-bottom: 0.5rem;
+  }
+
+  .ard-list-header span {
+    font-size: 0.65rem;
+  }
+
+  .ard-thumb-wrap {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .ard-song-info {
+    gap: 0.1rem;
+  }
+
+  .ard-song-title {
+    font-size: 0.8rem;
+  }
+
+  .ard-song-genre {
+    font-size: 0.68rem;
+  }
+
+  .col-duration {
+    font-size: 0.72rem;
+  }
+
+  .track-num {
+    font-size: 0.75rem;
+  }
+
+  .playing-icon {
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+
+  .ard-status {
+    font-size: 0.85rem;
+  }
+}

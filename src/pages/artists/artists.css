@@ -33,3 +33,65 @@
 .artists-error {
     color: #e05c5c;
 }
+
+/* ── Responsive Design ── */
+
+/* Large tablets */
+@media screen and (max-width: 1200px) {
+    #artists {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    #artists-container {
+        padding: 1.5rem 0;
+    }
+
+    #artists {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+    }
+}
+
+/* Small tablets */
+@media screen and (max-width: 768px) {
+    #artists-container {
+        padding: 1rem 0;
+    }
+
+    #artists-container h2 {
+        margin-left: 0.6rem;
+        font-size: 1.5rem;
+    }
+
+    #artists {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+        gap: 0.6rem;
+    }
+
+    .artists-status {
+        margin: 1.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    #artists-container h2 {
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    #artists {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .artists-status {
+        margin: 1.25rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}

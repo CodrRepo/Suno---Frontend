@@ -51,8 +51,8 @@
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: 3.5rem;
 }
 
@@ -295,4 +295,263 @@
 .ad-textarea {
   resize: vertical;
   min-height: 5rem;
+}
+
+/* ── Responsive Design ── */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .album-detail-page {
+    padding: 1.75rem 2rem;
+  }
+
+  .album-detail-cover-wrap {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .album-detail-title {
+    font-size: 2.2rem;
+  }
+
+  .album-detail-cover-placeholder {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .album-detail-page {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .album-detail-hero {
+    flex-direction: column;
+    /* align-items: center;
+    text-align: center; */
+    gap: 1.5rem;
+  }
+
+  .album-detail-cover-wrap {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .album-detail-cover-placeholder {
+    font-size: 2.5rem;
+  }
+
+  .album-detail-meta {
+    /* align-items: center; */
+    width: 100%;
+  }
+
+  .album-detail-title {
+    font-size: 2rem;
+  }
+
+  .album-detail-tags {
+    /* justify-content: center; */
+  }
+
+  .album-detail-desc {
+    /* text-align: center; */
+  }
+
+  .album-detail-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .album-detail-list-header,
+  .album-song-row {
+    grid-template-columns: 2rem 1fr 4rem;
+    gap: 0.5rem;
+    padding: 0.4rem 0.35rem;
+  }
+
+  .album-detail-list-header span {
+    font-size: 0.68rem;
+  }
+
+  .album-song-thumb-wrap {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .album-song-title {
+    font-size: 0.85rem;
+  }
+
+  .album-song-artist {
+    font-size: 0.72rem;
+  }
+
+  .col-duration {
+    font-size: 0.78rem;
+  }
+
+  .track-num {
+    font-size: 0.8rem;
+  }
+
+  .playing-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  /* Edit Modal */
+  .pl-modal {
+    width: 90%;
+    max-width: 90%;
+    margin: 1rem;
+  }
+
+  .ad-edit-cover-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .ad-edit-cover-thumb {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .album-detail-page {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .album-detail-back {
+    font-size: 0.85rem;
+  }
+
+  .album-detail-hero {
+    gap: 1.25rem;
+  }
+
+  .album-detail-cover-wrap {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .album-detail-cover-placeholder {
+    font-size: 2rem;
+  }
+
+  .album-detail-label {
+    font-size: 0.68rem;
+  }
+
+  .album-detail-title {
+    font-size: 1.6rem;
+  }
+
+  .album-detail-artist {
+    font-size: 0.85rem;
+  }
+
+  .album-detail-tag {
+    font-size: 0.7rem;
+    padding: 0.2em 0.65em;
+  }
+
+  .album-detail-desc {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .album-detail-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .album-detail-actions button {
+    width: 100%;
+  }
+
+  .album-detail-list-header,
+  .album-song-row {
+    grid-template-columns: 1.75rem 1fr 3.5rem;
+    gap: 0.4rem;
+    padding: 0.35rem 0.25rem;
+  }
+
+  .album-detail-list-header {
+    padding-bottom: 0.5rem;
+  }
+
+  .album-detail-list-header span {
+    font-size: 0.65rem;
+  }
+
+  .album-song-thumb-wrap {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .album-song-info {
+    gap: 0.1rem;
+  }
+
+  .album-song-title {
+    font-size: 0.8rem;
+  }
+
+  .album-song-artist {
+    font-size: 0.68rem;
+  }
+
+  .col-duration {
+    font-size: 0.72rem;
+  }
+
+  .track-num {
+    font-size: 0.75rem;
+  }
+
+  .playing-icon {
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+
+  .album-detail-status {
+    font-size: 0.85rem;
+  }
+
+  /* Edit Modal */
+  .pl-modal {
+    width: 95%;
+    max-width: 95%;
+    margin: 0.5rem;
+    padding: 1.25rem;
+  }
+
+  .pl-modal-title {
+    font-size: 1.1rem;
+  }
+
+  .ad-edit-cover-thumb {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .ad-edit-cover-label {
+    font-size: 0.75rem;
+  }
+
+  .pl-modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pl-modal-actions button {
+    width: 100%;
+  }
 }

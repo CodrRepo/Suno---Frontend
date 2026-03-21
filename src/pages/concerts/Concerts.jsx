@@ -93,73 +93,75 @@ const Concerts = () => {
       ) : rows.length === 0 ? (
         <p className='concerts-status'>No concert requests yet.</p>
       ) : (
-        <table className='concerts-table'>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>{profileType === 'artist' ? 'Listener' : 'Artist'}</th>
-              <th>Contact</th>
-              <th>Date</th>
-              <th>Message</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((req, index) => {
-              const person = profileType === 'artist' ? req.userId : req.artistId
-              const name = person?.artistName || person?.name || '—'
-              const busy = actionLoading && actionLoading.startsWith(req._id)
+        <div className='concerts-table-wrapper'>
+          <table className='concerts-table'>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>{profileType === 'artist' ? 'Listener' : 'Artist'}</th>
+                <th>Contact</th>
+                <th>Date</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((req, index) => {
+                const person = profileType === 'artist' ? req.userId : req.artistId
+                const name = person?.artistName || person?.name || '—'
+                const busy = actionLoading && actionLoading.startsWith(req._id)
 
-              return (
-                <tr key={req._id}>
-                  <td>{String(index + 1).padStart(2, '0')}</td>
-                  <td>{name}</td>
-                  <td>{req.contactNo}</td>
-                  <td>{req.date ? new Date(req.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '—'}</td>
-                  <td className='concerts-message'>{req.message || <span className='no-action'>—</span>}</td>
-                  <td>
-                    <span className={`status-badge status-${req.status}`}>
-                      {statusLabel[req.status] ?? req.status}
-                    </span>
-                  </td>
-                  <td>
-                    {profileType === 'artist' ? (
-                      req.status === 'pending' ? (
-                        <div className='action-btns'>
+                return (
+                  <tr key={req._id}>
+                    <td>{String(index + 1).padStart(2, '0')}</td>
+                    <td>{name}</td>
+                    <td>{req.contactNo}</td>
+                    <td>{req.date ? new Date(req.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '—'}</td>
+                    <td className='concerts-message'>{req.message || <span className='no-action'>—</span>}</td>
+                    <td>
+                      <span className={`status-badge status-${req.status}`}>
+                        {statusLabel[req.status] ?? req.status}
+                      </span>
+                    </td>
+                    <td>
+                      {profileType === 'artist' ? (
+                        req.status === 'pending' ? (
+                          <div className='action-btns'>
+                            <button
+                              className='approve-btn'
+                              disabled={!!busy}
+                              onClick={() => handleStatus(req._id, 'accepted')}
+                            >
+                              Accept
+                            </button>
+                            <button
+                              className='decline-btn'
+                              disabled={!!busy}
+                              onClick={() => handleStatus(req._id, 'rejected')}
+                            >
+                              Reject
+                            </button>
+                          </div>
+                        ) : <span className='no-action'>—</span>
+                      ) : (
+                        req.status === 'pending' ? (
                           <button
-                            className='approve-btn'
+                            className='withdraw-btn'
                             disabled={!!busy}
-                            onClick={() => handleStatus(req._id, 'accepted')}
+                            onClick={() => handleWithdraw(req._id)}
                           >
-                            Accept
+                            Withdraw
                           </button>
-                          <button
-                            className='decline-btn'
-                            disabled={!!busy}
-                            onClick={() => handleStatus(req._id, 'rejected')}
-                          >
-                            Reject
-                          </button>
-                        </div>
-                      ) : <span className='no-action'>—</span>
-                    ) : (
-                      req.status === 'pending' ? (
-                        <button
-                          className='withdraw-btn'
-                          disabled={!!busy}
-                          onClick={() => handleWithdraw(req._id)}
-                        >
-                          Withdraw
-                        </button>
-                      ) : <span className='no-action'>—</span>
-                    )}
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+                        ) : <span className='no-action'>—</span>
+                      )}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   )

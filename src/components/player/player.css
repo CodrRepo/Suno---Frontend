@@ -8,11 +8,12 @@
     z-index: 50;
 }
 
-/* ---- top row: action icons ---- */
-.player-controls {
+/* ---- top row: all controls in one row (desktop) ---- */
+.player-top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     position: relative;
 }
 
@@ -20,28 +21,35 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    min-width: 0;
 }
 
-.player-controls svg {
+.player-top-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.player-top-controls svg {
     width: 1.3rem;
     fill: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     transition: fill 0.2s;
 }
 
-.player-controls svg:hover {
+.player-top-controls svg:hover {
     fill: white;
 }
 
-/* ---- middle row: playback ---- */
+/* ---- middle row: playback (centered in top row on desktop) ---- */
 .player-main {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
-        position: absolute;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -25%);
 }
 
 .player-main svg {
@@ -51,9 +59,6 @@
     transition: fill 0.2s;
 }
 
-.player-main svg:hover {
-    fill: #2e2e2e;
-}
 
 .play-btn {
     cursor: pointer;
@@ -72,37 +77,13 @@
     fill: #ff0202;
 }
 
-/* ---- progress row ---- */
-.player-progress {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 1rem;
+.player-btn-disabled {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
 }
 
-.player-progress span {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1rem;
-    min-width: 2rem;
-}
-
-.progress-bar {
-    flex: 1;
-}
-
-/* ---- player right ------ */
-.player-right {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.player-extra-controls {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
+/* ---- control wrap (shuffle/repeat) ---- */
 .player-ctrl-wrap {
     position: relative;
     display: flex;
@@ -139,26 +120,29 @@
     pointer-events: none;
 }
 
-.player-btn-disabled {
-    opacity: 0.35 !important;
-    cursor: not-allowed !important;
-    pointer-events: none;
+/* ---- progress row ---- */
+.player-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
-.player-right svg {
-    width: 1.3rem;
-    fill: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: fill 0.2s;
+.player-progress span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    min-width: 2rem;
 }
 
+.progress-bar {
+    flex: 1;
+}
 
-/* ---- volume row ---- */
+/* ---- volume ---- */
 .player-volume {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: flex-end;
 }
 
 .player-volume svg {
@@ -361,4 +345,109 @@
 @keyframes toast-in {
     from { opacity: 0; transform: translateX(-50%) translateY(4px); }
     to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ---------------------- MOBILE RESPONSIVE ------------------- */
+@media (max-width: 1024px) {
+    .player {
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+    }
+
+    /* Top row: song info + controls */
+    .player-top-row {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .player-features {
+        flex: 0 0 50%;
+        max-width: 50%;
+        min-width: 0;
+    }
+
+    .player-thumb {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .player-song-title {
+        font-size: 0.82rem;
+        max-width: 100%;
+    }
+
+    .player-song-artist {
+        font-size: 0.72rem;
+        max-width: 100%;
+    }
+
+    /* Top controls - show heart, add, shuffle, repeat; hide volume */
+    .player-top-controls {
+        flex: 1;
+        gap: 0.5rem;
+        justify-content: flex-end;
+    }
+
+    .player-top-controls .player-volume {
+        display: none;
+    }
+
+    .player-top-controls svg,
+    .player-top-controls .player-ctrl-wrap svg {
+        width: 1.1rem;
+    }
+
+    /* Playback controls - remove absolute positioning, show as separate row */
+    .player-main {
+        position: static;
+        transform: none;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .player-main svg {
+        width: 1.1rem;
+    }
+
+    .play-btn {
+        width: 2.5rem;
+    }
+
+    /* Progress bar */
+    .player-progress {
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    .player-progress span {
+        font-size: 0.75rem;
+        min-width: 2.5rem;
+    }
+
+    .progress-bar,
+    .volume-bar {
+        height: 4px;
+    }
+
+    .progress-bar::-webkit-slider-thumb,
+    .volume-bar::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Playlist picker positioning */
+    .player-picker {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 85vw;
+        max-width: 85vw;
+    }
+
+    /* Toast positioning */
+    .player-toast {
+        top: -3rem;
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
 }

@@ -325,3 +325,179 @@
 .duration-edit-btn:hover {
   color: white;
 }
+
+/* ── Responsive Design ── */
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .add-song-page {
+    padding: 2rem;
+  }
+
+  .add-song-card {
+    padding: 1.5rem;
+  }
+
+  .cover-art-picker {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .add-song-layout {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .add-song-page {
+    padding: 1.5rem;
+  }
+
+  .add-song-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .add-song-card {
+    padding: 1.25rem;
+  }
+
+  .add-song-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cover-art-picker {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .add-song-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .add-song-field.full-span {
+    grid-column: 1;
+  }
+
+  .add-song-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .add-song-btn-cancel,
+  .add-song-btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .file-picker-name {
+    max-width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .add-song-page {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .add-song-page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .add-song-back-btn {
+    font-size: 0.85rem;
+  }
+
+  .add-song-card {
+    padding: 1rem;
+  }
+
+  .cover-art-picker {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .cover-art-icon {
+    font-size: 1.5rem;
+  }
+
+  .cover-art-hint {
+    font-size: 0.7rem;
+  }
+
+  .add-song-layout {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .add-song-grid {
+    gap: 0.85rem;
+  }
+
+  .add-song-field label {
+    font-size: 0.8rem;
+  }
+
+  .add-song-field input,
+  .add-song-field select,
+  .add-song-field textarea {
+    font-size: 0.85rem;
+    padding: 0.65em 0.75em;
+    width: 100%;
+  }
+
+  .add-song-error {
+    font-size: 0.8rem;
+  }
+
+  .add-song-actions {
+    gap: 0.6rem;
+  }
+
+  .add-song-btn-cancel,
+  .add-song-btn-submit {
+    font-size: 0.85rem;
+    padding: 0.65em 1.25em;
+  }
+
+  .file-picker {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .file-picker-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .file-picker-name {
+    text-align: center;
+  }
+
+  .duration-detected {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .duration-detected-value {
+    font-size: 0.85rem;
+  }
+
+  .duration-detected-label {
+    font-size: 0.7rem;
+  }
+
+  .duration-edit-btn {
+    font-size: 0.75rem;
+  }
+}

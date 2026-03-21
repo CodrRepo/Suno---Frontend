@@ -1,0 +1,35 @@
+#mobile-nav {
+    display: none;
+
+}
+
+.history-menu-open{
+    transform: translateX(100%);
+}
+
+.history-menu-close{
+    transform: translateX(0%);
+}
+
+@media (max-width: 768px) {
+    #mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        color: white;
+        padding: 2rem 1rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 1rem;
+
+    }
+
+    #mobile-nav svg {
+        width: 1.5rem;
+        fill: rgb(255, 255, 255);
+        cursor: pointer;
+
+    }
+}

@@ -20,3 +20,9 @@
     padding-bottom: 2rem;
     z-index: 30;
 }
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 5rem 1rem;
+    }
+}

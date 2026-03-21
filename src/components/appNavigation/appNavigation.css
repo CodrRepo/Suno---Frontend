@@ -4,6 +4,17 @@
     padding: 2rem 2rem;
 }
 
+.nav-content{
+    width: 100%;
+    height: calc(100vh - 10rem);
+    /* background-color: red; */
+    overflow: auto;
+}
+
+.nav-content::-webkit-scrollbar {
+    display: none;
+}
+
 .logo {
     width: 8rem;
 }
@@ -156,6 +167,20 @@
     height: auto;
 }
 
+.concerts-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.concerts-nav-dot {
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    background-color: #ff1f1f;
+    flex-shrink: 0;
+}
+
 .user-profile {
     display: flex;
     align-items: center;
@@ -214,4 +239,24 @@
     color: var(--light-gray-color);
     font-size: 0.9rem;
     text-transform: capitalize;
+}
+
+
+/* Mobile navigation styles */
+@media screen and (max-width: 768px) {
+    #app-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        background-color: black;
+    }
+
+    #app-navigation.mobile-nav-open {
+        transform: translateX(0);
+    }
 }

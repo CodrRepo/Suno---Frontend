@@ -10,11 +10,13 @@ const ConcertRequestForm = () => {
   const navigate = useNavigate()
 
   const [artist, setArtist] = useState(null)
-  const [contactNo, setContactNo] = useState('')
+  const [countryCode, setCountryCode] = useState('+91')
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
   const [date, setDate] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [phoneError, setPhoneError] = useState('')
 
   useEffect(() => {
     axios
@@ -23,8 +25,28 @@ const ConcertRequestForm = () => {
       .catch(() => setError('Failed to load artist info.'))
   }, [artistId])
 
+  const handlePhoneChange = (value) => {
+    setPhoneNumber(value)
+    // Validate that it's exactly 10 digits
+    if (value && !/^\d{10}$/.test(value)) {
+      setPhoneError('Contact number must be exactly 10 digits')
+    } else {
+      setPhoneError('')
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    // Final validation
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      setPhoneError('Contact number must be exactly 10 digits')
+      return
+    }
+
+    // Combine country code and phone number
+    const contactNo = countryCode + phoneNumber
+
     setSubmitting(true)
     setError('')
     try {
@@ -62,17 +84,29 @@ const ConcertRequestForm = () => {
         <form className='crf-form' onSubmit={handleSubmit}>
           <div className='crf-field'>
             <label className='crf-label'>Contact Number</label>
-            <input
-              className='crf-input'
-              type='tel'
-              placeholder='+911234567890'
-              value={contactNo}
-              onChange={e => setContactNo(e.target.value)}
-              pattern='^\+\d{11,14}$'
-              title='Enter country code followed by 10-digit number (e.g. +911234567890)'
-              required
-            />
-            <span className='crf-hint'>Format: +&lt;country code&gt;&lt;10-digit number&gt; — e.g. +911234567890</span>
+            <div className='crf-phone-wrapper'>
+              <input
+                className='crf-input crf-country-code'
+                type='text'
+                placeholder='+91'
+                value={countryCode}
+                onChange={e => setCountryCode(e.target.value)}
+                pattern='^\+\d{1,4}$'
+                title='Enter country code (e.g., +91, +1, +44)'
+                required
+              />
+              <input
+                className='crf-input crf-phone-number'
+                type='tel'
+                placeholder='1234567890'
+                value={phoneNumber}
+                onChange={e => handlePhoneChange(e.target.value)}
+                maxLength={10}
+                required
+              />
+            </div>
+            {phoneError && <span className='crf-error-hint'>{phoneError}</span>}
+            <span className='crf-hint'>Enter country code and 10-digit phone number</span>
           </div>
 
           <div className='crf-field'>

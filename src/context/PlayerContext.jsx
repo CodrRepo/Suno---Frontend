@@ -164,6 +164,16 @@ export const PlayerProvider = ({ children }) => {
     playQueue([song], 0)
   }, [playQueue])
 
+  const play = useCallback(() => {
+    if (!howlRef.current) return
+    howlRef.current.play()
+  }, [])
+
+  const pause = useCallback(() => {
+    if (!howlRef.current) return
+    howlRef.current.pause()
+  }, [])
+
   const togglePlay = useCallback(() => {
     if (!howlRef.current) return
     if (howlRef.current.playing()) {
@@ -234,7 +244,7 @@ export const PlayerProvider = ({ children }) => {
       currentSong, playing, seek, duration, volume,
       repeat, shuffle,
       playSong, playQueue, playNext, playPrev,
-      togglePlay, toggleRepeat, toggleShuffle,
+      play, pause, togglePlay, toggleRepeat, toggleShuffle,
       seekTo, changeVolume,
     }}>
       {children}

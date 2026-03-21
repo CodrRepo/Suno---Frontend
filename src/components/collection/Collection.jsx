@@ -3,12 +3,20 @@ import './collection.css'
 import History from '../history/History'
 import Recommendation from '../recommendation/Recommendation'
 
-const Collection = () => {
+const Collection = ({ isHistoryMenuOpen, setIsHistoryMenuOpen }) => {
   return (
-    <div className='panel collection'>
-      <Recommendation />
-      <History />
-    </div>
+    <>
+      {isHistoryMenuOpen && (
+        <div
+          className="mobile-collection-backdrop"
+          onClick={() => setIsHistoryMenuOpen(false)}
+        />
+      )}
+      <div className={`panel collection ${isHistoryMenuOpen ? 'mobile-collection-open' : ''}`}>
+        <Recommendation />
+        <History />
+      </div>
+    </>
   )
 }
 
