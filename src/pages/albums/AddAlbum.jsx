@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import '../songs/addSong.css'
 import './addAlbum.css'
-import BackBtn from '../../components/BackBtn/BackBtn';
+import BackBtn from '../../components/backBtn/BackBtn';
 
 const GENRES = ['Pop', 'Rock', 'Hip-Hop', 'R&B', 'Jazz', 'Classical', 'Electronic', 'Country', 'Metal', 'Folk', 'Other']
 

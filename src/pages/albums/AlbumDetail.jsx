@@ -5,7 +5,7 @@ import { usePlayer } from '../../context/PlayerContext'
 import { useUser } from '../../context/UserContext'
 import '../playlists/playlists.css'
 import './albumDetail.css'
-import BackBtn from '../../components/BackBtn/BackBtn'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)
