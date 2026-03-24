@@ -7,7 +7,7 @@ import Card from '../../components/card/Card'
 import '../playlists/playlists.css'
 import '../albums/albumDetail.css'
 import './songDetail.css'
-import BackBtn from '../../components/BackBtn/BackBtn'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)

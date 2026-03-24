@@ -3,7 +3,7 @@ import axios from '../../utils/axios'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import './addSong.css'
-import BackBtn from '../../components/BackBtn/BackBtn'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const GENRES = ['Pop', 'Rock', 'Hip-Hop', 'R&B', 'Jazz', 'Classical', 'Electronic', 'Country', 'Metal', 'Folk', 'Other']
 
