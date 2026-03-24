@@ -352,6 +352,8 @@
 @media screen and (max-width: 768px) {
   .add-song-page {
     padding: 1.5rem;
+    width: 70%;
+    margin: 0 auto;
   }
 
   .add-song-page-header {
@@ -404,12 +406,14 @@
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
   .add-song-page {
-    padding: 1rem;
+    padding: 0rem;
     gap: 1.25rem;
+    width: 100%;
   }
 
   .add-song-page-header h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    margin-top: 1rem;
   }
 
   .add-song-back-btn {
@@ -430,7 +434,7 @@
   }
 
   .cover-art-hint {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .add-song-layout {
@@ -439,19 +443,25 @@
   }
 
   .add-song-grid {
-    gap: 0.85rem;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .add-song-field label {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .add-song-field input,
   .add-song-field select,
   .add-song-field textarea {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     padding: 0.65em 0.75em;
     width: 100%;
+  }
+  
+  .add-song-field textarea{
+    font-size: 1.2rem;
+    height: 10rem;
   }
 
   .add-song-error {
@@ -464,7 +474,7 @@
 
   .add-song-btn-cancel,
   .add-song-btn-submit {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     padding: 0.65em 1.25em;
   }
 

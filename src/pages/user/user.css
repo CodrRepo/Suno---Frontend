@@ -21,7 +21,7 @@
   flex-shrink: 0;
   position: relative;
   width: 5.5rem;
-  height: 5.5rem;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: red;
   display: flex;
@@ -171,8 +171,13 @@
   margin-bottom: 1rem;
 }
 
-.user-msg--error   { color: #ff5555; }
-.user-msg--success { color: #22c55e; }
+.user-msg--error {
+  color: #ff5555;
+}
+
+.user-msg--success {
+  color: #22c55e;
+}
 
 .user-form-grid {
   display: grid;
@@ -255,8 +260,14 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.btn-save:hover:not(:disabled) { background-color: #cc0000; }
-.btn-save:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-save:hover:not(:disabled) {
+  background-color: #cc0000;
+}
+
+.btn-save:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
 
 /* ── Logout ── */
 .logout-desc {
@@ -314,8 +325,15 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btn-delete:hover:not(:disabled) { background-color: #ef4444; color: white; }
-.btn-delete:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-delete:hover:not(:disabled) {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-delete:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
 
 .delete-confirm p {
   color: var(--light-gray-color);
@@ -340,7 +358,9 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.btn-cancel:hover { background-color: rgba(255, 255, 255, 0.1); }
+.btn-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 /* ── Profile type toggle ── */
 .profile-type-desc {
@@ -404,7 +424,7 @@
   display: flex;
   gap: 0.6rem;
   align-items: center;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 .artist-name-input {
@@ -420,8 +440,13 @@
   transition: border-color 0.2s ease-in-out;
 }
 
-.artist-name-input:focus { border-color: rgba(255, 255, 255, 0.35); }
-.artist-name-input.input-error { border-color: #ef4444; }
+.artist-name-input:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.artist-name-input.input-error {
+  border-color: #ef4444;
+}
 
 .btn-confirm-artist {
   padding: 0.55em 1.25em;
@@ -436,8 +461,14 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-.btn-confirm-artist:hover:not(:disabled) { opacity: 0.85; }
-.btn-confirm-artist:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-confirm-artist:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.btn-confirm-artist:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
 
 .btn-cancel-artist {
   padding: 0.55em 1.1em;
@@ -451,8 +482,15 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btn-cancel-artist:hover:not(:disabled) { background-color: rgba(255, 255, 255, 0.07); color: white; }
-.btn-cancel-artist:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-cancel-artist:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+.btn-cancel-artist:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
 
 .artist-name-error {
   margin-top: 0.5rem;
@@ -472,7 +510,7 @@
   position: relative;
   flex-shrink: 0;
   width: 3.5rem;
-  height: 3.5rem;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.07);
   border: 2px dashed rgba(255, 255, 255, 0.25);
@@ -514,8 +552,8 @@
 
 /* ── Responsive Design ── */
 
-/* Tablet devices */
-@media screen and (max-width: 1024px) {
+/* Large tablets */
+@media screen and (max-width: 1200px) {
   .user-page {
     padding: 2rem;
   }
@@ -525,17 +563,38 @@
   }
 }
 
-/* Mobile devices */
-@media screen and (max-width: 768px) {
+/* Tablets */
+@media screen and (max-width: 1024px) {
   .user-page {
     padding: 1.5rem;
   }
 
   .user-header {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .user-card {
+    padding: 1.5rem 1.75rem;
+  }
+}
+
+/* Mobile devices */
+/* @media screen and (max-width: 768px) {
+  .user-page {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .user-header {
     flex-direction: column;
     text-align: center;
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .profile-type-desc {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
   }
 
   .user-header-info {
@@ -551,7 +610,8 @@
   }
 
   .user-header-top h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .user-stats {
@@ -560,7 +620,7 @@
   }
 
   .user-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .user-form-grid {
@@ -588,75 +648,123 @@
   .btn-cancel-artist {
     width: 100%;
   }
-}
+} */
 
 /* Small mobile devices */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .user-page {
-    padding: 1rem;
+    padding: 0rem;
     gap: 1rem;
   }
 
   .user-header {
+    flex-direction: column;
+    text-align: center;
     padding: 1.25rem;
+    gap: 1.25rem;
   }
 
-  .user-avatar {
-    width: 4.5rem;
-    height: 4.5rem;
-    font-size: 1.8rem;
+  .profile-type-desc {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .user-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-header-top {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .user-header-top h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .user-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-avatar {
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    font-size: 1.8rem;
+  }
+
+  .user-avatar span{
+    font-size: 2rem;
+  }
+
+  .user-header-top h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 
   .user-badge {
-    font-size: 0.65rem;
-    padding: 0.25em 0.65em;
+    font-size: 1rem;
+    padding: 0.25em 0.7em;
   }
 
   .user-email {
-    font-size: 0.82rem;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
   }
 
   .user-joined {
-    font-size: 0.78rem;
+    font-size: 0.9rem;
   }
 
   .stat-value {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
   .stat-label {
-    font-size: 0.72rem;
+    font-size: 1rem;
   }
 
   .user-card {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .user-card-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 1.25rem;
   }
 
   .form-field label {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .form-field input,
   .form-field textarea {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     padding: 0.65em 0.75em;
+  }
+
+  .form-field textarea {
+    height: 13rem;
+  }
+
+  .form-divider span {
+    font-size: 1.1rem;
   }
 
   .btn-save,
   .btn-logout,
   .btn-delete,
   .btn-cancel {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     padding: 0.65em 1.25em;
+  }
+
+  .logout-desc {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
   }
 
   .profile-type-toggle {
@@ -666,8 +774,30 @@
 
   .profile-type-btn {
     flex: 1;
-    font-size: 0.85rem;
-    padding: 0.5em 1em;
+    font-size: 1.2rem;
+    padding: 0.6em 1em;
+  }
+
+  .artist-name-prompt-label {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .artist-prompt-photo-label {
+    font-size: 1rem;
+    color: var(--light-gray-color);
+    margin-bottom: 0.15rem;
+  }
+
+  .artist-prompt-photo-hint {
+    font-size: 1rem;
+    color: var(--medium-gray-color);
+  }
+
+  .artist-name-input {
+    font-size: 1.2rem;
+    padding: 0.65em 0.75em;
   }
 
   .artist-prompt-photo {
@@ -677,7 +807,17 @@
   }
 
   .artist-prompt-avatar {
-    width: 4rem;
-    height: 4rem;
+    width: 7rem;
+    aspect-ratio: 1/1;
+  }
+
+  .btn-confirm-artist {
+    font-size: 1.1rem;
+    padding: 0.65em 1.25em;
+  }
+
+  .btn-cancel-artist {
+    font-size: 1.1rem;
+    padding: 0.65em 1.25em;
   }
 }

@@ -1,4 +1,4 @@
-#home{
+#home {
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -17,7 +17,7 @@
     z-index: 10;
 }
 
-.panel-container{
+.panel-container {
     height: 100%;
     width: 100%;
     z-index: 25;
@@ -28,21 +28,21 @@
     gap: 2rem;
 }
 
-.panel{
+.panel {
     min-height: 100vh;
     color: white;
 }
 
 /* ---------------------- HOME CONTENT ------------------- */
-.home-content{
+.home-content {
     padding: 2rem 0rem;
 }
 
-.home-content-heading{
+.home-content-heading {
     margin-top: 1rem;
 }
 
-.home-content .card{
+.home-content .card {
     width: 100%;
     border-radius: 1em;
     position: relative;
@@ -57,46 +57,46 @@
     padding: 2rem;
 }
 
-.home-content .card > * {
+.home-content .card>* {
     position: relative;
     z-index: 1;
 }
 
-.home-content .card-header{
+.home-content .card-header {
     display: flex;
     justify-content: space-between;
 }
 
-.home-content .card-header h4{
+.home-content .card-header h4 {
     color: white;
     font-size: 1rem;
 }
 
-.home-content .listeners{
+.home-content .listeners {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.home-content .card-header .listeners p{
+.home-content .card-header .listeners p {
     color: white;
     font-size: 1rem;
     font-weight: 600;
 }
 
-.home-content .card-song{
+.home-content .card-song {
     font-size: 2.6rem;
     font-weight: 600;
     width: 60%;
 }
 
-.home-content .card-footer{
+.home-content .card-footer {
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
 }
 
-.home-content .card-footer button{
+.home-content .card-footer button {
     border-radius: 2em;
     background-color: #c43030;
     border: none;
@@ -109,12 +109,12 @@
     justify-content: center;
 }
 
-.home-content .card-footer .follow-btn{
+.home-content .card-footer .follow-btn {
     border: 1px solid white;
     background-color: transparent;
 }
 
-.home-content .card-footer svg{
+.home-content .card-footer svg {
     width: 1.1rem;
     fill: white;
 }
@@ -143,7 +143,7 @@
 
 .playlist-table {
     width: 100%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     color: white;
 }
 
@@ -204,13 +204,14 @@
 
 /* ---------------------- MOBILE RESPONSIVE ------------------- */
 @media (max-width: 1024px) {
-    .panel-container{
+    .panel-container {
         grid-template-columns: 1fr 3fr 1fr;
         gap: 1rem;
     }
 }
+
 @media (max-width: 800px) {
-    .panel-container{
+    .panel-container {
         grid-template-columns: 1fr 2fr 1fr;
         gap: 1rem;
     }
@@ -223,31 +224,33 @@
         gap: 0;
     }
 
-    .panel:first-child{
+    .panel:first-child {
         position: absolute;
-        /* display: none; */
         top: 0;
     }
-    
+
     .panel:last-child {
         position: absolute;
         top: 0;
         background-color: black;
         width: 100%;
-        /* display: none; */
     }
 
-    .collection__section{
+    .collection__section {
         flex: 0 !important;
     }
-    
-    .collection__list{
+
+    .collection__list {
         flex: none !important;
         height: 40vh !important;
     }
 
     .home-content {
-        padding: 1rem 0;
+        padding: 0rem 0;
+    }
+
+    .home-content .listeners {
+        gap: 0.5rem;
     }
 
     .home-content .card {
@@ -260,13 +263,35 @@
         width: 80%;
     }
 
+    .card-artist-name {
+        margin-top: 0.5rem;
+    }
+
+    .home-content .card-footer button {
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .home-content .card-footer button svg {
+        width: 1.2rem;
+    }
+
+    .home-content .card-footer button span {
+        font-size: 1.3rem;
+    }
+
+    .playlist-table td svg {
+    height: 1.2rem;
+}
+
     .playlist-table th,
     .playlist-table td {
         padding: 0.5rem 0.5rem;
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .playlist-table th {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 }

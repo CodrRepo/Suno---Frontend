@@ -17,6 +17,8 @@ const Card = ({ item, song, fallbackLetter, onPlay }) => {
 
     const showLetter = !item.url && fallbackLetter
 
+    console.log(item);
+
     return (
         <div className={`card`}>
             <div className='card-image'>

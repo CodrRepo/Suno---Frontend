@@ -5,6 +5,7 @@ import { usePlayer } from '../../context/PlayerContext'
 import { useUser } from '../../context/UserContext'
 import '../playlists/playlists.css'
 import './albumDetail.css'
+import BackBtn from '../../components/BackBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)
@@ -49,8 +50,10 @@ const AlbumDetail = () => {
     return () => { cancelled = true }
   }, [albumId])
 
-  const isOwner = !!(user && user.profileType === 'artist' && album &&
-    user._id?.toString() === album?.userId?._id.toString())
+  const isOwner = !!(user && user.profileType === 'artist' && album && (
+    user._id?.toString() === album?.userId?._id?.toString() ||
+    user._id?.toString() === album?.userId?.toString()
+  ))
 
     console.log(album)
 
@@ -86,11 +89,13 @@ const AlbumDetail = () => {
       fd.append('description', editForm.description.trim())
       fd.append('genre', editForm.genre)
       if (editCover) fd.append('coverImage', editCover)
-      const res = await axios.patch(`/api/albums/${albumId}`, fd, {
+      await axios.patch(`/api/albums/${albumId}`, fd, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' },
       })
-      setAlbum(res.data.album)
+      // Reload album data to get populated userId
+      const albumRes = await axios.get(`/api/albums/${albumId}`, { withCredentials: true })
+      setAlbum(albumRes.data.album)
       setShowEdit(false)
       console.log(isOwner, user, album)
     } catch (err) {
@@ -119,7 +124,8 @@ const AlbumDetail = () => {
   return (
     <div className='album-detail-page'>
 
-      <button className='album-detail-back' onClick={() => navigate('/albums')}>← Back</button>
+      {/* <button className='album-detail-back' onClick={() => navigate('/albums')}>← Back</button> */}
+      <BackBtn />
 
       {/* Hero */}
       <div className='album-detail-hero'>

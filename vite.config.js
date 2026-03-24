@@ -11,6 +11,11 @@ export default defineConfig({
     }),
   ],
   server: {
+    host: true, // This enables the 'Network' link for your mobile
+    watch: {
+      usePolling: true, // This fixes the "pooling/polling" error
+    },
+    
     proxy: {
       '/api': {
         target: 'http://localhost:3000',

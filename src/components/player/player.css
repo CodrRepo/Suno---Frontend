@@ -157,7 +157,7 @@
 /* ---- song info ---- */
 .player-thumb {
     width: 2.6rem;
-    height: 2.6rem;
+    aspect-ratio: 1;
     border-radius: 0.4em;
     object-fit: cover;
     flex-shrink: 0;
@@ -350,7 +350,7 @@
 /* ---------------------- MOBILE RESPONSIVE ------------------- */
 @media (max-width: 1024px) {
     .player {
-        padding: 0.75rem 1rem;
+        padding: 0.75rem 1.5rem;
         gap: 0.75rem;
     }
 
@@ -362,29 +362,30 @@
 
     .player-features {
         flex: 0 0 50%;
-        max-width: 50%;
+        max-width: 45%;
         min-width: 0;
+        gap: 0.8rem;
     }
 
     .player-thumb {
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 3.8rem;
+        aspect-ratio: 1;
     }
 
     .player-song-title {
-        font-size: 0.82rem;
+        font-size: 1.3rem;
         max-width: 100%;
     }
 
     .player-song-artist {
-        font-size: 0.72rem;
+        font-size: 1.05rem;
         max-width: 100%;
     }
 
     /* Top controls - show heart, add, shuffle, repeat; hide volume */
     .player-top-controls {
         flex: 1;
-        gap: 0.5rem;
+        gap: 0.8rem;
         justify-content: flex-end;
     }
 
@@ -394,7 +395,7 @@
 
     .player-top-controls svg,
     .player-top-controls .player-ctrl-wrap svg {
-        width: 1.1rem;
+        width: 1.7rem;
     }
 
     /* Playback controls - remove absolute positioning, show as separate row */
@@ -402,26 +403,26 @@
         position: static;
         transform: none;
         width: 100%;
-        gap: 1rem;
+        gap: 2rem;
+        margin: 0.8rem 0rem;
     }
 
     .player-main svg {
-        width: 1.1rem;
+        width: 1.8rem;
     }
 
     .play-btn {
-        width: 2.5rem;
+        width: 3.6rem;
     }
 
     /* Progress bar */
     .player-progress {
-        margin-top: 0;
-        gap: 0.5rem;
+        gap: 2rem;
     }
 
     .player-progress span {
-        font-size: 0.75rem;
-        min-width: 2.5rem;
+        font-size: 1rem;
+        /* min-width: 2.5rem; */
     }
 
     .progress-bar,

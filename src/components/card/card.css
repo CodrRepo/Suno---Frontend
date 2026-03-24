@@ -1,4 +1,4 @@
-.card{
+.card {
     border-radius: 1em;
     cursor: pointer;
     padding: 0.8rem;
@@ -10,11 +10,11 @@
     background-color: rgb(17, 17, 17);
 }
 
-.card .card-image{
+.card .card-image {
     position: relative;
 }
 
-.card img{
+.card img {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
@@ -37,7 +37,7 @@
     user-select: none;
 }
 
-.card .play-btn{
+.card .play-btn {
     position: absolute;
     bottom: 1rem;
     right: 0.8rem;
@@ -51,22 +51,22 @@
     background-color: red;
 }
 
-.card:hover .play-btn{
+.card:hover .play-btn {
     opacity: 1;
 }
 
-.card .play-btn svg{
+.card .play-btn svg {
     width: 1.3rem;
     fill: white;
     color: white;
 }
 
-.card h2{
+.card h2 {
     font-size: 1.1rem;
     margin-top: 0.5rem;
 }
 
-.card h3{
+.card h3 {
     font-size: 1.05rem;
     margin-top: 0.3rem;
     color: var(--medium-gray-color);
@@ -77,4 +77,24 @@
     font-size: 0.82rem;
     color: var(--medium-gray-color);
     margin-top: 0.15rem;
+}
+
+
+/* ---------- Tablet --------  */
+@media (max-width: 1024px) {
+    .card {
+        padding: 0rem;
+    }
+
+    .card:hover,
+.card--active {
+    background-color: rgba(17, 17, 17, 0);
+}
+
+    .card .play-btn {
+        opacity: 1;
+    }
+    .card-date{
+        font-size: 1rem;
+    }
 }

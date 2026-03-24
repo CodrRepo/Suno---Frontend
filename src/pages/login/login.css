@@ -142,3 +142,37 @@
 .login .form-container p .register-link:hover {
   color: var(--light-gray-color);
 }
+
+
+@media (max-width: 768px) {
+  .login .form-container h1 {
+  font-size: 1.9rem;
+}
+
+.login .form-container .subtitle {
+  font-size: 1rem;
+}
+
+  .login .form-container label {
+  font-size: 1.1rem;
+}
+
+.login .form-container input {
+  font-size: 1.1rem;
+}
+
+.login .form-container button {
+  font-size: 1.1rem;
+}
+
+.login .form-container .redirect {
+  margin-top: 1.2em;
+  color: var(--medium-gray-color);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.login .form-container p .register-link {
+  font-size: 1.1rem;
+}
+}

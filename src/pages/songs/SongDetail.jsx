@@ -7,6 +7,7 @@ import Card from '../../components/card/Card'
 import '../playlists/playlists.css'
 import '../albums/albumDetail.css'
 import './songDetail.css'
+import BackBtn from '../../components/BackBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)
@@ -137,7 +138,7 @@ const SongDetail = () => {
 
   return (
     <div className='sd-page'>
-      <button className='album-detail-back' onClick={() => navigate('/songs')}>← Back</button>
+      <BackBtn />
 
       {/* Hero */}
       <div className='sd-hero'>

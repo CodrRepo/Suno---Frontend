@@ -45,7 +45,9 @@ const Playlists = () => {
             <Card
               item={{
                 category: 'playlist',
-                url: pl.coverImage || '',
+                url: pl.isFavorites
+                  ? 'https://res.cloudinary.com/dj974ecp3/image/upload/v1774252570/favourite_brd4yh.webp'
+                  : (pl.coverImage || ''),
                 name: pl.name,
               }}
             />

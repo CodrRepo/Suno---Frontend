@@ -210,17 +210,17 @@ const AppNavigation = ({ isHamMenuOpen, setIsHamMenuOpen }) => {
     fetchConcertRequests()
   }, [location.pathname, readSeenPendingIds])
 
-  const handleConcertNavClick = () => {
-    if (!pendingConcertIds.length) return
-    const seenIds = readSeenPendingIds()
-    const merged = [...new Set([...seenIds, ...pendingConcertIds])]
-    saveSeenPendingIds(merged)
-    setShowConcertDot(false)
+    const handleNavLinkClick = () => {
     if (window.innerWidth <= 768) setIsHamMenuOpen(false)
   }
 
-  const handleNavLinkClick = () => {
-    if (window.innerWidth <= 768) setIsHamMenuOpen(false)
+  const handleConcertNavClick = () => {
+    handleNavLinkClick();
+    if (!pendingConcertIds.length) return
+    const seenIds = readSeenPendingIds();
+    const merged = [...new Set([...seenIds, ...pendingConcertIds])];
+    saveSeenPendingIds(merged);
+    setShowConcertDot(false);
   }
 
   return (

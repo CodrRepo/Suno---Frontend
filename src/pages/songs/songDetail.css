@@ -119,7 +119,7 @@
 .sd-edit-cover-thumb {
   flex-shrink: 0;
   width: 3.5rem;
-  height: 3.5rem;
+  aspect-ratio: 1;
   border-radius: 0.4rem;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.08);
@@ -186,8 +186,7 @@
 
   .sd-hero {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 1.5rem;
   }
 
@@ -207,7 +206,6 @@
   }
 
   .sd-meta {
-    align-items: center;
     width: 100%;
   }
 
@@ -225,7 +223,7 @@
   }
 
   .sd-artists-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 0.6rem;
   }
 
@@ -237,12 +235,12 @@
 
   .sd-edit-cover-thumb {
     width: 4rem;
-    height: 4rem;
+    aspect-ratio: 1;
   }
 
   /* Edit Modal */
   .pl-modal {
-    width: 90%;
+    width: 60%;
     max-width: 90%;
     margin: 1rem;
   }
@@ -251,7 +249,7 @@
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
   .sd-page {
-    padding: 1rem;
+    padding: 0rem;
     gap: 1.25rem;
   }
 
@@ -271,6 +269,10 @@
   .sd-play-btn {
     bottom: 0.4rem;
     right: 0.4rem;
+  }
+
+  .sd-play-btn svg {
+    width: 1.5rem;
   }
 
   .sd-title {
@@ -296,13 +298,13 @@
   }
 
   .sd-artists-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
 
   .sd-edit-cover-thumb {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5rem;
+    aspect-ratio: 1;
   }
 
   .sd-edit-cover-label {
@@ -312,14 +314,14 @@
 
   /* Edit Modal */
   .pl-modal {
-    width: 95%;
+    width: 85%;
     max-width: 95%;
     margin: 0.5rem;
     padding: 1.25rem;
   }
 
   .pl-modal-title {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .pl-modal-actions {

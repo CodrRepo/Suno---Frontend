@@ -4,6 +4,7 @@ import axios from '../../utils/axios';  // adjust path as needed
 import { usePlayer } from '../../context/PlayerContext'
 import { useUser } from '../../context/UserContext'
 import './artistDetail.css'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)
@@ -72,7 +73,7 @@ const ArtistDetail = () => {
 
   return (
     <div className='ard-page'>
-      <button className='ard-back' onClick={() => navigate('/artists')}>← Back</button>
+      <BackBtn />
 
       {/* Hero */}
       <div className='ard-hero'>

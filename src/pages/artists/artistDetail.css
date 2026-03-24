@@ -33,7 +33,7 @@
 .ard-avatar-wrap {
   flex-shrink: 0;
   width: 13rem;
-  height: 13rem;
+  aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.06);
@@ -159,7 +159,7 @@
 
 .playing-icon {
   width: 1rem;
-  height: 1rem;
+  aspect-ratio: 1;
   color: red;
 }
 
@@ -312,7 +312,7 @@
 
   .ard-avatar-wrap {
     width: 11rem;
-    height: 11rem;
+    aspect-ratio: 1;
   }
 
   .ard-title {
@@ -333,14 +333,12 @@
 
   .ard-hero {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 1.5rem;
   }
 
   .ard-avatar-wrap {
     width: 10rem;
-    height: 10rem;
+    aspect-ratio: 1;
   }
 
   .ard-avatar-placeholder {
@@ -348,7 +346,7 @@
   }
 
   .ard-meta {
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
   }
 
@@ -356,23 +354,13 @@
     font-size: 2rem;
   }
 
-  .ard-tags {
-    justify-content: center;
-  }
-
   .ard-desc {
-    text-align: center;
+    text-align: left;
   }
 
   .ard-action-row {
-    justify-content: center;
+    justify-content: left;
     width: 100%;
-  }
-
-  .ard-follow-btn,
-  .ard-concert-btn {
-    flex: 1;
-    min-width: 120px;
   }
 
   .ard-list-header,
@@ -388,7 +376,7 @@
 
   .ard-thumb-wrap {
     width: 2.2rem;
-    height: 2.2rem;
+    aspect-ratio: 1;
   }
 
   .ard-song-title {
@@ -409,14 +397,14 @@
 
   .playing-icon {
     width: 0.9rem;
-    height: 0.9rem;
+    aspect-ratio: 1;
   }
 }
 
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
   .ard-page {
-    padding: 1rem;
+    padding: 0rem;
     gap: 1.25rem;
   }
 
@@ -430,7 +418,7 @@
 
   .ard-avatar-wrap {
     width: 8rem;
-    height: 8rem;
+    aspect-ratio: 1;
   }
 
   .ard-avatar-placeholder {
@@ -446,31 +434,32 @@
   }
 
   .ard-tag {
-    font-size: 0.7rem;
+    font-size: 1rem;
     padding: 0.2em 0.65em;
   }
 
   .ard-desc {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     max-width: 100%;
+    margin-top: 1rem;
   }
 
   .ard-action-row {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .ard-follow-btn,
   .ard-concert-btn {
-    width: 100%;
+    width: fit-content;
     padding: 0.5em 1.2em;
-    font-size: 0.82rem;
+    font-size: 1rem;
   }
 
   .ard-list-header,
   .ard-song-row {
-    grid-template-columns: 1.75rem 1fr 3.5rem;
+    grid-template-columns: 1.75rem 1fr 5.5rem;
     gap: 0.4rem;
     padding: 0.35rem 0.25rem;
   }
@@ -480,12 +469,12 @@
   }
 
   .ard-list-header span {
-    font-size: 0.65rem;
+    font-size: 0.9rem;
   }
 
   .ard-thumb-wrap {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    aspect-ratio: 1;
   }
 
   .ard-song-info {
@@ -493,24 +482,25 @@
   }
 
   .ard-song-title {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+    text-transform: capitalize;
   }
 
   .ard-song-genre {
-    font-size: 0.68rem;
+    font-size: 1rem;
   }
 
   .col-duration {
-    font-size: 0.72rem;
+    font-size: 1.1rem;
   }
 
   .track-num {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .playing-icon {
     width: 0.85rem;
-    height: 0.85rem;
+    aspect-ratio: 1;
   }
 
   .ard-status {

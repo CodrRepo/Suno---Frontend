@@ -3,6 +3,8 @@ import axios from '../../utils/axios'
 import { useNavigate } from 'react-router-dom'
 import '../songs/addSong.css'
 import '../albums/addAlbum.css'
+import './playlists.css'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const AddPlaylist = () => {
   const navigate = useNavigate()
@@ -61,9 +63,7 @@ const AddPlaylist = () => {
     <div className='add-song-page'>
 
       <div className='add-song-page-header'>
-        <button className='add-song-back-btn' onClick={() => navigate('/playlists')}>
-          ← Back
-        </button>
+        <BackBtn />
         <h1 className='primary-heading'>New Playlist</h1>
       </div>
 

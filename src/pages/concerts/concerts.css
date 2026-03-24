@@ -202,20 +202,15 @@
     }
 
     .concerts-header {
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        align-items: flex-end;
+        justify-content: space-between;
         gap: 1rem;
         padding: 0 1rem;
     }
 
-    .concerts-header-right {
-        width: 100%;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
     .request-concert-btn {
-        width: 100%;
+        width: fit-content;
         text-align: center;
     }
 
@@ -280,19 +275,20 @@
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
     .concerts-header {
-        padding: 0 0.75rem;
+        padding: 0 0rem;
     }
 
     .concerts-header-left h3 {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .concerts-header-left h2 {
-        font-size: 1.25rem;
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
     }
 
     .request-concert-btn {
-        font-size: 0.85rem;
+        font-size: 1rem;
         padding: 0.5rem 1rem;
     }
 
@@ -306,13 +302,13 @@
     }
 
     .concerts-table th {
-        font-size: 0.65rem;
+        font-size: 0.9rem;
         padding: 0.45rem 0.3rem;
     }
 
     .concerts-table td {
-        font-size: 0.75rem;
-        padding: 0.55rem 0.3rem;
+        font-size: 1rem;
+        padding: 0.8rem 0.3rem;
     }
 
     .concerts-message {
@@ -320,7 +316,7 @@
     }
 
     .status-badge {
-        font-size: 0.68rem;
+        font-size: 1rem;
         padding: 0.18rem 0.5rem;
     }
 

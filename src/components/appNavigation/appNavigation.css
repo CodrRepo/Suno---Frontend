@@ -4,10 +4,9 @@
     padding: 2rem 2rem;
 }
 
-.nav-content{
+.nav-content {
     width: 100%;
     height: calc(100vh - 10rem);
-    /* background-color: red; */
     overflow: auto;
 }
 
@@ -19,7 +18,7 @@
     width: 8rem;
 }
 
-.search-bar{
+.search-bar {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -34,7 +33,7 @@
     position: relative;
 }
 
-.search-bar svg{
+.search-bar svg {
     width: 1.7rem;
     color: var(--gray-color);
 }
@@ -155,6 +154,7 @@
     align-items: center;
     gap: 0.5rem;
 }
+
 .menu-links .link-container svg {
     width: 1.4rem;
     fill: white;
@@ -235,7 +235,7 @@
     text-transform: capitalize;
 }
 
-.user-profile p{
+.user-profile p {
     color: var(--light-gray-color);
     font-size: 0.9rem;
     text-transform: capitalize;
@@ -251,6 +251,7 @@
         height: 100vh;
         width: 100%;
         z-index: 1000;
+        padding: 6rem 1.5rem;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
         background-color: black;
@@ -258,5 +259,75 @@
 
     #app-navigation.mobile-nav-open {
         transform: translateX(0);
+    }
+
+    .nav-content {
+        height: calc(100vh - 14rem);
+    }
+
+    .logo {
+        width: 11rem;
+
+
+    }
+
+    /* Search bar */
+    .search-bar {
+        padding: 0.8rem 1rem;
+    }
+
+    .search-wrap {
+        margin-top: 3rem;
+    }
+
+    .search-bar svg {
+        width: 1.7rem;
+    }
+
+    .search-bar input {
+        font-size: 1.2rem;
+    }
+
+    .search-item-sub {
+        font-size: 0.78rem;
+    }
+
+    /* Menu */
+    .menu h2 {
+        font-size: 1.2rem;
+    }
+
+    .menu-links .link-container {
+        gap: 1rem;
+    }
+
+    .menu-links .link-container svg {
+        width: 2rem;
+    }
+
+    .menu-links a {
+        font-size: 1.8rem;
+    }
+
+    /* User profile */
+    .user-profile {
+        gap: 1rem;
+    }
+
+    .user-profile img {
+        width: 3.8rem;
+    }
+
+    .nav-avatar-letter {
+        width: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .user-profile h3 {
+        font-size: 1.5rem;
+    }
+
+    .user-profile p {
+        font-size: 1.1rem;
     }
 }

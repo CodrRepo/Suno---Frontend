@@ -5,6 +5,7 @@ import { usePlayer } from '../../context/PlayerContext'
 import { useUser } from '../../context/UserContext'
 import './playlistDetail.css'
 import '../playlists/playlists.css'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 const fmt = (secs) => {
   const s = Math.round(secs)
@@ -192,14 +193,18 @@ const PlaylistDetail = () => {
 
   return (
     <div className='pd-page'>
-      <button className='pd-back' onClick={() => navigate('/playlists')}>
-        ← Back
-      </button>
+      <BackBtn />
 
       {/* Hero */}
       <div className='pd-hero'>
         <div className='pd-cover-wrap'>
-          {playlist.coverImage ? (
+          {playlist.isFavorites ? (
+            <img
+              className='pd-cover'
+              src='https://res.cloudinary.com/dj974ecp3/image/upload/v1774252570/favourite_brd4yh.webp'
+              alt={playlist.name}
+            />
+          ) : playlist.coverImage ? (
             <img className='pd-cover' src={playlist.coverImage} alt={playlist.name} />
           ) : (
             <div className='pd-cover-placeholder'>♫</div>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import '../songs/addSong.css'
 import './addAlbum.css'
+import BackBtn from '../../components/BackBtn/BackBtn';
 
 const GENRES = ['Pop', 'Rock', 'Hip-Hop', 'R&B', 'Jazz', 'Classical', 'Electronic', 'Country', 'Metal', 'Folk', 'Other']
 
@@ -79,7 +80,7 @@ const AddAlbum = () => {
     <div className='add-song-page'>
 
       <div className='add-song-page-header'>
-        <button className='add-song-back-btn' onClick={() => navigate('/albums')}>← Back</button>
+        <BackBtn />
         <h1 className='primary-heading'>New Album</h1>
       </div>
 

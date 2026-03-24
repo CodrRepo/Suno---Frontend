@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from '../../utils/axios';  // adjust path as needed
 import './concertRequestForm.css'
+import BackBtn from '../../components/BackBtn/BackBtn';
 
 const today = new Date().toISOString().split('T')[0]
 
@@ -67,14 +68,14 @@ const ConcertRequestForm = () => {
 
   return (
     <div className='crf-page'>
-      <button className='crf-back' onClick={() => navigate(-1)}>← Back</button>
+      <BackBtn />
 
       <div className='crf-card'>
         <div className='crf-heading'>
           <h2 className='crf-title'>Request a Concert</h2>
           {artist && (
             <p className='crf-subtitle'>
-              Sending request to <span className='crf-artist-name'>{displayName}</span>
+              Send request to <span className='crf-artist-name'>{displayName}</span>
             </p>
           )}
         </div>

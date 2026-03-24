@@ -80,7 +80,7 @@ const Concerts = () => {
               className='request-concert-btn'
               onClick={() => navigate('/artists')}
             >
-              + Request New Concert
+              + Request Concert
             </button>
           )}
         </div>
