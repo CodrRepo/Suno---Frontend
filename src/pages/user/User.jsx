@@ -5,7 +5,7 @@ import { useUser } from '../../context/UserContext'
 import { clearAuthData } from '../../utils/clearAuth'
 import './user.css'
 import { usePlayer } from '../../context/PlayerContext'
-import BackBtn from '../../components/BackBtn/BackBtn'
+import BackBtn from '../../components/backBtn/BackBtn'
 
 function compressImage(file, maxPx = 400, quality = 0.82) {
   return new Promise((resolve) => {
