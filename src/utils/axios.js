@@ -3,6 +3,7 @@ import axios from 'axios';
 // Create axios instance with base configuration
 const axiosInstance = axios.create({
   baseURL: 'https://suno-backend.onrender.com', // Update with your backend URL or use environment variable
+  // baseURL: 'http://192.168.1.103:5173', // Update with your backend URL or use environment variable
   withCredentials: true,
 });
 

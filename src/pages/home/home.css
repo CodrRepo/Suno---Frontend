@@ -87,6 +87,7 @@
 .home-content .card-song {
     font-size: 2.6rem;
     font-weight: 600;
+    text-transform: capitalize;
     width: 60%;
 }
 
@@ -242,7 +243,7 @@
 
     .collection__list {
         flex: none !important;
-        height: 40vh !important;
+        height: 30vh !important;
     }
 
     .home-content {

@@ -16,7 +16,7 @@
   padding: 1rem 0;
 }
 
-.collection__section + .collection__section {
+.collection__section+.collection__section {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -77,6 +77,15 @@
 
   .collection.mobile-collection-open {
     transform: translateX(0);
+    padding-top:6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .collection__title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .mobile-collection-backdrop {

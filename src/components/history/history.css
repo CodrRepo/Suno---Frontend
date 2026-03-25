@@ -31,13 +31,13 @@
 .hist-thumb-wrap {
   position: relative;
   width: 38px;
-  height: 38px;
+  aspect-ratio: 1;
   flex-shrink: 0;
 }
 
 .hist-thumb {
   width: 38px;
-  height: 38px;
+  aspect-ratio: 1;
   border-radius: 4px;
   object-fit: cover;
   display: block;
@@ -100,4 +100,35 @@
   color: rgba(255, 255, 255, 0.35);
   font-size: 0.72rem;
   flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+  .hist-item {
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .hist-thumb-wrap {
+    width: 2.8rem;
+    aspect-ratio: 1;
+  }
+
+  .hist-thumb,
+  .hist-thumb--empty {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hist-title {
+    font-size: 1.1rem;
+  }
+
+  .hist-artist {
+    font-size: 1rem;
+  }
+
+  .hist-time {
+    font-size: 0.9rem;
+  }
 }
